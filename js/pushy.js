@@ -169,6 +169,7 @@
 		}else{
 			return false;
 		}
+		return true; // fix by RK for giving false when 3d transform translate3d available
 	})();
 
 	if(cssTransforms3d){
