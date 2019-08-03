@@ -141,7 +141,8 @@
 	}
 
 	//checks if 3d transforms are supported removing the modernizr dependency
-	var cssTransforms3d = (function csstransforms3d(){
+	var cssTransforms3d = true;
+/*        (function csstransforms3d(){
 		var el = document.createElement('p'),
 		supported = false,
 		transforms = {
@@ -171,7 +172,7 @@
 		}
 		return true; // fix by RK for giving false when 3d transform translate3d available
 	})();
-
+*/
 	if(cssTransforms3d){
 		//toggle submenu
 		toggleSubmenu();
@@ -184,7 +185,7 @@
 		siteOverlay.on('click', function(){
 			togglePushy();
 		});
-	}else{
+	}/*else{
 		//add css class to body
 		body.addClass('no-csstransforms3d');
 
@@ -225,5 +226,5 @@
 				opened = true;
 			}
 		});
-	}
+	}*/
 }(jQuery));
